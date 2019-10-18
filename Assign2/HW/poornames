@@ -1,23 +1,59 @@
 #!/bin/bash
 
-dir=""
+dir="no directory assigned, I dun goofed"
 
-if [ $# == 0 ]; then
+if [[ $# -eq 0 ]]; then
     dir=$(pwd)
+
+elif [[ $# -eq 1 ]]; then
+    # directory name can't start with a dash
+    if echo "$1" | grep -Eq "^-"; then
+        echo "$0: invalid syntax, directory name cannot start with '-'"
+        exit 1
+
+    # arg can't be a non-directory or symlink
+    elif ! [[ -d $1 ]]; then
+        echo "$0: $1 is not a directory." >&2
+        exit 1
+    elif [[ -L $1 ]]; then
+        echo "$0: $1 is a symbolic link, and therefore invalid." >&2
+        exit 1
+    
+    # otherwise $1 is valid, diagnose if it can't be read
+    else
+        dir=$1
+        if ! [[ -r $1 ]]; then
+            echo "$0: $dir is not marked as readable." >&2
+        fi
+    fi
+
 # can't have 2+ arguments
-elif [ $# -gt 1 ]; then
+elif [[ $# -ge 2 ]]; then
     echo "$0: too many arguments."
     exit 1
-# arg1 can't start with a dash
-elif [ $# == 1 ] && [ $1 == -* ]; then
-    echo "$0: invalid syntax, directory name cannot start with '-'"
-    exit 1
 fi
 
-# error and exit if D isn't a directory or is a symlink
-if [ $# == 1 ] && { ! [ -d "$1" ] || [ -L "$1" ]; }; then
-    echo "$0: $1 is not a directory." >&2
-    exit 1
-fi
+# automatically remove dir's trailing /, if it has one
+dir=$(echo $dir | sed -r "s@/\$@@g")
+echo "dir=$dir"
 
-echo $dir
+files=$(ls -a $dir | tr '[:upper:]' '[:lower:]')
+
+for file in $files
+do
+    # these will always show up, check every other one
+    if [[ "$file" == "." ]] || [[ "$file" == ".." ]]; then
+        continue
+    else
+        if echo $file | grep -Eq "^\..+"; then
+            echo "${dir}/${file}"
+        fi
+    fi
+#    if [[ "$file" != "." ]] && [[ "$file" != ".." ]]; then
+#        if echo $file | grep -Eq "\..+"; then
+#            echo "${dir}/$file"
+#        fi
+#    fi
+done
+
+exit 0
