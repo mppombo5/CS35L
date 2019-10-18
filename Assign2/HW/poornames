@@ -1,0 +1,23 @@
+#!/bin/bash
+
+dir=""
+
+if [ $# == 0 ]; then
+    dir=$(pwd)
+# can't have 2+ arguments
+elif [ $# -gt 1 ]; then
+    echo "$0: too many arguments."
+    exit 1
+# arg1 can't start with a dash
+elif [ $# == 1 ] && [ $1 == -* ]; then
+    echo "$0: invalid syntax, directory name cannot start with '-'"
+    exit 1
+fi
+
+# error and exit if D isn't a directory or is a symlink
+if [ $# == 1 ] && { ! [ -d "$1" ] || [ -L "$1" ]; }; then
+    echo "$0: $1 is not a directory." >&2
+    exit 1
+fi
+
+echo $dir
