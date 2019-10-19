@@ -47,13 +47,10 @@ do
     else
         if echo $file | grep -Eq "^\..+"; then
             echo "${dir}/${file}"
+        elif echo $file | grep -Eq "[^_[:alnum:]\.-]+"; then 
+            echo "${dir}/${file}"
         fi
     fi
-#    if [[ "$file" != "." ]] && [[ "$file" != ".." ]]; then
-#        if echo $file | grep -Eq "\..+"; then
-#            echo "${dir}/$file"
-#        fi
-#    fi
 done
 
 exit 0
