@@ -60,3 +60,8 @@ _deps
 # [._]*.un~
 #
 # # End of https://www.gitignore.io/api/vim
+
+
+# Ignore certain things in my repo
+
+Assign4/coreutils-with-bug/
