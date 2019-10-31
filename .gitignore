@@ -64,4 +64,4 @@ _deps
 
 # Ignore certain things in my repo
 
-Assign4/Lab/coreutils-with-bug/
+Assign4/Lab/coreutils-with-bug*/
