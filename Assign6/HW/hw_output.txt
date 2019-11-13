@@ -1,0 +1,87 @@
+execve("./randmain", ["./randmain", "24"], [/* 44 vars */]) = 0
+brk(NULL)                               = 0x19c6000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feb13f23000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/35L/Assign6/HW/tls/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/35L/Assign6/HW/tls", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/35L/Assign6/HW/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/35L/Assign6/HW", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/u/cs/ugrad/pombo/local/lib/tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/local/lib/tls/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/local/lib/tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/local/lib/tls", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/local/lib/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/local/lib/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/local/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/u/cs/ugrad/pombo/local/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}) = 0
+open("/usr/local/cs/lib/tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/cs/lib/tls/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/usr/local/cs/lib/tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/cs/lib/tls", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/usr/local/cs/lib/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/cs/lib/x86_64", 0x7ffdc8d411c0) = -1 ENOENT (No such file or directory)
+open("/usr/local/cs/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/cs/lib", {st_mode=S_IFDIR|0775, st_size=8192, ...}) = 0
+open("tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libdl.so.2", O_RDONLY|O_CLOEXEC)  = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=158981, ...}) = 0
+mmap(NULL, 158981, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7feb13efc000
+close(3)                                = 0
+open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19248, ...}) = 0
+mmap(NULL, 2109744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7feb13aff000
+mprotect(0x7feb13b01000, 2097152, PROT_NONE) = 0
+mmap(0x7feb13d01000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7feb13d01000
+close(3)                                = 0
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/u/cs/ugrad/pombo/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/cs/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libc.so.6", O_RDONLY|O_CLOEXEC)   = -1 ENOENT (No such file or directory)
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P&\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2156072, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feb13efb000
+mmap(NULL, 3985888, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7feb13731000
+mprotect(0x7feb138f4000, 2097152, PROT_NONE) = 0
+mmap(0x7feb13af4000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c3000) = 0x7feb13af4000
+mmap(0x7feb13afa000, 16864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7feb13afa000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feb13ef9000
+arch_prctl(ARCH_SET_FS, 0x7feb13ef9740) = 0
+mprotect(0x7feb13af4000, 16384, PROT_READ) = 0
+mprotect(0x7feb13d01000, 4096, PROT_READ) = 0
+mprotect(0x601000, 4096, PROT_READ)     = 0
+mprotect(0x7feb13f24000, 4096, PROT_READ) = 0
+munmap(0x7feb13efc000, 158981)          = 0
+open("/u/cs/ugrad/pombo/35L/Assign6/HW/randlibhw.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\5\0\0\0\0\0\0"..., 832) = 832
+brk(NULL)                               = 0x19c6000
+brk(0x19e7000)                          = 0x19e7000
+brk(NULL)                               = 0x19e7000
+fstat(3, {st_mode=S_IFREG|0755, st_size=63528, ...}) = 0
+mmap(NULL, 2101304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7feb1352f000
+mprotect(0x7feb13530000, 2093056, PROT_NONE) = 0
+mmap(0x7feb1372f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0x7feb1372f000
+close(3)                                = 0
+mprotect(0x7feb1372f000, 4096, PROT_READ) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 4), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feb13f22000
+write(1, "c41b1accf7b345db\n", 17)      = 17
+write(1, "b00e91be351161e6\n", 17)      = 17
+write(1, "ffee3a91b09cbd08\n", 17)      = 17
+close(1)                                = 0
+munmap(0x7feb13f22000, 4096)            = 0
+munmap(0x7feb1352f000, 2101304)         = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

@@ -65,3 +65,5 @@ _deps
 # Ignore certain things in my repo
 
 Assign4/Lab/coreutils-with-bug*/
+Assign5/Lab/straceuterm.txt
+Assign5/Lab/straceufile.txt
