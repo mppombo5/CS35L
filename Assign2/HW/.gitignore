@@ -1,0 +1,3 @@
+# ignore the huge files in lab 2 HW
+bin*
+lib*
