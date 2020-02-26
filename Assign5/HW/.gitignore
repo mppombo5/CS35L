@@ -1,0 +1,9 @@
+# ignore big files and reference files, and executables
+sfrob
+sfrobu
+sfrobuInput
+bigfile.txt
+infinityWar.txt
+makebig
+sfrobutrace.txt
+test.txt

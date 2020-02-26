@@ -1,0 +1,4 @@
+# ignore output files and executables
+*.txt
+trb
+tru
